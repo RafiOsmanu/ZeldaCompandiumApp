@@ -1,0 +1,255 @@
+﻿<Page x:Class="ZeldaCompandiumApp.View.DetailPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZeldaCompandiumApp.View"
+      xmlns:vm="clr-namespace:ZeldaCompandiumApp.ViewModel"
+      xmlns:converter="clr-namespace:ZeldaCompandiumApp.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DetailPage">
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="SheikahBlue" Color="#40d4fc" />
+        <FontFamily x:Key="RobotoMedium">/ZeldaCompandiumApp;components/Resources/Fonts/#Roboto Medium</FontFamily>
+        <converter:StringArrayToStringConverter x:Key="ToString"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <vm:DetailPageVM/>
+    </Page.DataContext>
+
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.65*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="0.8*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--background & overlays-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Bg\BgPattern.png" Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ScanLines.png" Stretch="UniformToFill" Opacity="0.2" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\Glow0.png" Stretch="Uniform" VerticalAlignment="Bottom" Margin="0,0,0,-30" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\Glow1.png" Stretch="Uniform" VerticalAlignment="Top" Margin="0,-15,0,0" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ShekiahMapBorder.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+
+        <!--Monster picture & frame-->
+        <Border BorderBrush="White" BorderThickness="2"  Grid.Row="1" Grid.Column="1" Margin="7">
+            <Border.Effect>
+                <DropShadowEffect Color="AliceBlue" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Border.Effect>
+            <Image Source="{Binding CurrentMonster.Image, FallbackValue=C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Monsters\fire_keese.png}" 
+                   Grid.Row="1" Grid.Column="1" Width="160" Height="160"  
+                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Stretch="Fill"  />
+        </Border>
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ImageFrame.png" Stretch="Fill"  Grid.Row="1" Grid.Column="1">
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--RECOVERABLE MATERIALS TEXT-->
+        <!--line1-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="148" Height="1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Margin="9, 22.5, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+
+        <!--line2-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="148" Height="1"  Grid.Column="2" Grid.Row="2" Margin="74, 22.5, 0, 0" VerticalAlignment="Top" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <!--Recoverable Materials text-->
+        <TextBlock Text="Recoverable Materials" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="10" FontStyle="Italic"  Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-15, 17.5, 0, 0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!--line1 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideL.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="2" Grid.Column="1" 
+               VerticalAlignment="Top" HorizontalAlignment="Left"
+               Margin="-5, 16.5, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--line2 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideR.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="2" Grid.Column="2" 
+               VerticalAlignment="Top" 
+               Margin="237, 16.5, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--COMMON LOCATIONS LINE-->
+        <!--line1-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="60" Height="1" Grid.Column="2" Grid.Row="1" Margin="30, 60, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+
+        <!--line2-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="60" Height="1"  Grid.Column="2" Grid.Row="1" Margin="163, 60, 0, 0" VerticalAlignment="Center" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <!--Common Locations text-->
+        <TextBlock Text="Common Locations" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="10" FontStyle="Italic"  Grid.Column="2" Grid.Row="1" Grid.RowSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="7, 60.5, 0, 0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!--line1 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideL.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="1" Grid.Column="2" 
+               VerticalAlignment="Center" HorizontalAlignment="Left"
+               Margin="15.5, 60.5, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--line2 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideR.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="1" Grid.Column="2" 
+               VerticalAlignment="Center" 
+               Margin="237, 60, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <TextBlock Text="{Binding CurrentMonster.Name}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="11" FontStyle="Italic"  
+                   Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Margin="0, -80, 0, 0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+
+
+
+        <!--DESCRIPTION TEXT-->
+        <!--line1-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="78" Height="1" 
+                   Grid.Column="2" Grid.Row="1" 
+                   Margin="30, 4, 0, 0" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+
+        <!--line2-->
+        <Rectangle Fill="{StaticResource SheikahBlue}" Width="78" Height="1"  
+                   Grid.Column="2" Grid.Row="1" 
+                   Margin="146, 4, 0, 0" 
+                   VerticalAlignment="Top" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <!--Description title text-->
+        <TextBlock Text="Description" Foreground="{StaticResource SheikahBlue}" 
+                   FontFamily="{StaticResource RobotoMedium}" FontSize="10" FontStyle="Italic"  
+                   Grid.Column="2" Grid.Row="1" Grid.RowSpan="1" 
+                   VerticalAlignment="Top" HorizontalAlignment="Center" 
+                   Margin="9, -1.35, 0, 0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!--line1 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideL.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="1" Grid.Column="2" 
+               VerticalAlignment="Top" HorizontalAlignment="Left"
+               Margin="15.5, -2, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--line2 detail-->
+        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\LineSideR.png" 
+               Stretch="Uniform" 
+               Width="15" Height="15" 
+               Grid.Row="1" Grid.Column="2" 
+               VerticalAlignment="Top" 
+               Margin="237, -2, 0, 0">
+
+            <Image.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+
+        <!--Description Text-->
+        <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Description}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
+                   FontSize="10" FontStyle="Italic"  
+                   Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" 
+                   VerticalAlignment="Top" HorizontalAlignment="Center"
+                  Background="Transparent" BorderThickness="0"
+                  Width="210"
+                   Margin="0, 13, 0, 0">
+            <TextBox.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Common_locations, Converter={StaticResource ToString}}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
+                   FontSize="10" FontStyle="Italic"   
+                  Background="Transparent" BorderThickness="0"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Width="auto" Height="auto"
+                   Margin="30,126,0,0" Grid.Column="2" Grid.Row="1">
+            <TextBox.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBox.Effect>
+        </TextBox>
+
+
+    </Grid>
+</Page>

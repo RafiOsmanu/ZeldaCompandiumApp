@@ -1,0 +1,360 @@
+{
+  "data": {
+
+    "monsters": [
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Gerudo Highlands",
+          "Tabantha Frontier"
+        ],
+        "description": "These octopus-like monsters live in snowy fields and disguise themselves as grass. When someone wanders by, they spring into action and attack by spitting snowballs.",
+        "drops": [
+          "octorok tentacle",
+          "octo balloon",
+          "octorok eyeball"
+        ],
+        "id": 95,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/snow_octorok/image",
+        "name": "snow octorok"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field"
+        ],
+        "description": "After Ganon was defeated by Link, the remaining Malice pulled itself together to form this bestial creature. Its appearance and fiendish magic eared it the name of Dark Beast. This form is considered to be Ganon's original, although in this state, his awareness has been consumed entirely by Malice, and all he knows is a desire to rampage and destroy.",
+        "drops": [
+
+        ],
+        "id": 164,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/dark_beast_ganon/image",
+        "name": "dark beast ganon"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Greater Hyrule"
+        ],
+        "description": "A very young Stone Talus. Their bodies toughen as they mature, becoming as tough as boulders by adulthood. As a child, however, their bodies are light enough to be lifted and fragile enough to break when thrown.",
+        "drops": [
+          "flint",
+          "amber",
+          "opal"
+        ],
+        "id": 143,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/stone_pebblit/image",
+        "name": "stone pebblit"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Hebra Mountains"
+        ],
+        "description": "These spell-casting monsters can be found all over Hyrule. They use their blizzard rods to create freezing blasts of air or to summon frozen monsters and have been known to cause blizzards to severely decrease the temperature around them. The weather will normalize once the Blizzrobe is defeated.",
+        "drops": [
+
+        ],
+        "id": 101,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/blizzrobe/image",
+        "name": "blizzrobe"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Eldin Canyon",
+          "Eldin Mountains"
+        ],
+        "description": "The fire that engulfs the bodies of these bat-like Keese makes them more dangerous than the standard type. They're capable of setting fire to anything they touch.",
+        "drops": [
+          "fire keese wing",
+          "keese eyeball"
+        ],
+        "id": 89,
+        "image": "https://botw-compendium.herokuapp.com/api/v/entry/fire_keese/image",
+        "name": "fire keese"
+      },
+      {
+        "category": "monsters",
+        "common_locations": null,
+        "description": "The arbiter of worthiness for the hero who wishes to control a Divine Beast, following a revelation from the Goddess Hylia. As the last part of the final trial, the monk offers a challenge of ancient techniques.",
+        "drops": [
+
+        ],
+        "id": 137,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/monk_maz_koshia/image",
+        "name": "monk maz koshia"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Hebra Mountains"
+        ],
+        "description": "These fearsome monsters have lived in Hyrule since ancient times. Their ability to breathe fire makes White-Maned Lynels among the toughest of the species; each one of their attacks is an invitation to the grave. There are so few eyewitness accounts of this breed because a White-Maned Lynel is not one to let even simple passersby escape with their lives.",
+        "drops": [
+          "lynel horn",
+          "lynel hoof",
+          "lynel guts"
+        ],
+        "id": 123,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/white-maned_lynel/image",
+        "name": "white-maned lynel"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Eldin Canyon"
+        ],
+        "description": "These spell-casting monsters can be found all over Hyrule. They use their meteor rods to hurl fireballs or to summon flaming monsters and have been known to severely raise the temperature around them. The weather will normalize once the Wizzrobe is defeated.",
+        "drops": [
+
+        ],
+        "id": 100,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/meteo_wizzrobe/image",
+        "name": "meteo wizzrobe"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Eldin Canyon",
+          "Eldin Mountains"
+        ],
+        "description": "This low-level gel monster is engulfed in flames. Its strength varies depending on its size. It tends to explode if attacked from close range, so the use of spears, arrows, and other ranged weapons is advised.",
+        "drops": [
+          "red chuchu jelly"
+        ],
+        "id": 85,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/fire_chuchu/image",
+        "name": "fire chuchu"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Lanayru Great Spring",
+          "Hyrule Field"
+        ],
+        "description": "These fearsome monsters have lived in Hyrule since ancient times. They possess intense intelligence, resilience, and strength, making them among the most dangerous monsters in all the land. This is compounded by the fact that they have a natural resistance to all elements. You would be wise to challenge a Lynel only if you're very well prepared.",
+        "drops": [
+          "lynel horn",
+          "lynel hoof",
+          "lynel guts"
+        ],
+        "id": 121,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/lynel/image",
+        "name": "lynel"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Gerudo Highlands"
+        ],
+        "description": "Although Bokoblins are generally a nuisance, the Black Bokoblins are among the most dangerous type. They're extremely resilient, and many are armed with more advanced weapons.",
+        "drops": [
+          "bokoblin horn",
+          "bokoblin fang",
+          "bokoblin guts"
+        ],
+        "id": 105,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/black_bokoblin/image",
+        "name": "black bokoblin"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Lake Hylia",
+          "Lake Floria"
+        ],
+        "description": "A spirit of lightning has taken the form of this giant dragon. Making its home in the Faron region, it's said to have served the Spring of Courage since ancient times. An old saying goes, \"The dragon ascends to the heavens as the sun begins to set,\" but nobody has seen this in the current age. The electricity that coats its body makes it dangerous to get near, but Farosh bears no ill will toward people.",
+        "drops": null,
+        "id": 155,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/farosh/image",
+        "name": "farosh"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Divine Beast Vah Medoh"
+        ],
+        "description": "This phantom of Ganon attacked the Divine Beast Vah Medoh and was responsible for the demise of the Champion Revali. It specializes in long-ranged wind attacks.",
+        "drops": [
+
+        ],
+        "id": 162,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/windblight_ganon/image",
+        "name": "windblight ganon"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Eldin Canyon"
+        ],
+        "description": "These heavyweight monsters can be found all over Hyrule and are among the most dangerous types of Moblin. They're extremely resilient and are often armed with some of the strongest weapons Moblins can carry.",
+        "drops": [
+          "moblin horn",
+          "moblin fang",
+          "moblin guts"
+        ],
+        "id": 110,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/black_moblin/image",
+        "name": "black moblin"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "East Necluda"
+        ],
+        "description": "The unpredictable flight pattern of this noctoural bat-like species can make fighting them a nuisance, but they're weak enough to fell with a single strike. Sometimes they'll attack in packs, but even then, a pack can be sent packing with a single attack.",
+        "drops": [
+          "keese wing",
+          "keese eyeball"
+        ],
+        "id": 88,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/keese/image",
+        "name": "keese"
+      },
+      {
+        "category": "monsters",
+        "common_locations": null,
+        "description": "Guardians were originally designed by an ancient civilization to combat Ganon, but these smaller models were placed inside shrines as part of the trials found within. The multiple legs and beam functionality were scaled down but kept mostly intact.",
+        "drops": [
+          "ancient screw",
+          "ancient spring"
+        ],
+        "id": 130,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/guardian_scout_i/image",
+        "name": "guardian scout i"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hebra Mountains",
+          "Gerudo Highlands"
+        ],
+        "description": "The intense frost that engulfs the bodies of these bat-like Keese makes them more dangerous than the standard type. They're capable of freezing anything they touch.",
+        "drops": [
+          "ice keese wing",
+          "keese eyeball"
+        ],
+        "id": 90,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/ice_keese/image",
+        "name": "ice keese"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Great Hyrule Forest",
+          "Gerudo Highlands"
+        ],
+        "description": "The remains of Moblins appear in the dark of the night. Even the toughest Moblins become fragile when they're little more than a pile of bones, so they'll crumble after just a few attacks. However, as long as a skull remains intact, they'll continue to pull themselves back together and go on fighting.",
+        "drops": [
+          "moblin horn",
+          "moblin fang"
+        ],
+        "id": 111,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/stalmoblin/image",
+        "name": "stalmoblin"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Deep Akkala"
+        ],
+        "description": "These fearsome monsters have lived in Hyrule since ancient times. Compared to the standard Lynel, those with blue manes much tougher and equipped with much stronger weapons. Facing off against a Lynel is ill-advised, but if you must, be sure you're well prepared.",
+        "drops": [
+          "lynel horn",
+          "lynel hoof",
+          "lynel guts"
+        ],
+        "id": 122,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/blue-maned_lynel/image",
+        "name": "blue-maned lynel"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hebra Mountains",
+          "Gerudo Highlands"
+        ],
+        "description": "A very young Frost Talus. Their bodies toughen and frost over as they mature, becoming entirely made of ice by adulthood. As a child, however, their bodies are awfully fragile and are light enough to be blown away by a bomb's blast.",
+        "drops": [
+          "flint",
+          "amber",
+          "sapphire"
+        ],
+        "id": 145,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/frost_pebblit/image",
+        "name": "frost pebblit"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Castle"
+        ],
+        "description": "The source of the darkness that has appeared time and again throughout Hyrule's history. It's been called many names, from \"Great King of Evil\" to \"Calamity.\" Hibernating within a cocoon, it attempted to regenerate a physical form after Link awoke but was forced to confront him in an incomplete state.",
+        "drops": [
+
+        ],
+        "id": 163,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/calamity_ganon/image",
+        "name": "calamity ganon"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Gerudo Desert",
+          "Hyrule Ridge"
+        ],
+        "description": "These quick-witted, lizard-like monsters can be found all over Hyrule. The can emit strong electrical currents from their bodies, so don't get too close. Their horns are brimming with electricity, which will discharge and arc to nearby areas if struck by an arrow. They tend to live in desert climates.",
+        "drops": [
+          "lizalfos horn",
+          "lizalfos tail",
+          "yellow lizalfos tail"
+        ],
+        "id": 119,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/electric_lizalfos/image",
+        "name": "electric lizalfos"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Gerudo Highlands",
+          "Hebra Mountains"
+        ],
+        "description": "These quick-witted, lizard-like monsters can be found all over Hyrule. The balls of ice they spit make them particularly troublesome, but exposure to fire will kill them instantly. Their homes are mainly on snowy mountains.",
+        "drops": [
+          "lizalfos horn",
+          "lizalfos talon",
+          "icy lizalfos tail"
+        ],
+        "id": 118,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/ice-breath_lizalfos/image",
+        "name": "ice-breath lizalfos"
+      },
+      {
+        "category": "monsters",
+        "common_locations": [
+          "Hyrule Field",
+          "Akkala Highlands"
+        ],
+        "description": "The Sheikah of ancient Hyrule developed this as a weapon to combat Ganon. This flying model is an improvement over the walking type, capable of either attacking or surveying from the air. Destroying the propeller will ground it.",
+        "drops": [
+          "ancient screw",
+          "ancient spring",
+          "ancient gear"
+        ],
+        "id": 126,
+        "image": "https://botw-compendium.herokuapp.com/api/v2/entry/guardian_skywatcher/image",
+        "name": "guardian skywatcher"
+      }
+    ]
+  }
+}
+
+  

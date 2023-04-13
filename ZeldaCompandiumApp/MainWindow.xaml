@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZeldaCompandiumApp"
+        xmlns:view="clr-namespace:ZeldaCompandiumApp.View"
+        xmlns:vm="clr-namespace:ZeldaCompandiumApp.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" 
+        MaxWidth="800" MaxHeight="450" 
+        MinWidth="800" MinHeight="450">
+    
+    <Window.DataContext>
+        <vm:DetailPageVM/>
+    </Window.DataContext>
+
+    <view:DetailPage x:Name="detailPage" Background="#333">
         
-    </Grid>
+    </view:DetailPage>
+
+   
 </Window>
