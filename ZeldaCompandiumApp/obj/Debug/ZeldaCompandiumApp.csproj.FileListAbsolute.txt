@@ -36,3 +36,5 @@ C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\bin\Debug\System.
 C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\obj\Debug\ZeldaCompandiumApp.csproj.CopyComplete
+C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\obj\Debug\View\OverViewPage.g.cs
+C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\obj\Debug\View\OverViewPage.baml

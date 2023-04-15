@@ -87,10 +87,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\StringArrayToStringConverter.cs" />
+    <Compile Include="Converters\StringToImage.cs" />
+    <Compile Include="Converters\UrlToImage.cs" />
     <Compile Include="Model\Monster.cs" />
+    <Compile Include="Repository\MonsterRepository.cs" />
     <Compile Include="ViewModel\DetailPageVM.cs" />
+    <Compile Include="ViewModel\OverViewPageVM.cs" />
     <Compile Include="View\DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OverViewPage.xaml.cs">
+      <DependentUpon>OverViewPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -105,6 +112,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OverViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,18 +143,55 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\Json\CompandiumInfo.json" />
+    <EmbeddedResource Include="Resources\Json\CompandiumInfo.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="Resources\Bg\" />
-    <Folder Include="Resources\Details\" />
     <Folder Include="Resources\Fonts\" />
     <Folder Include="Resources\Monsters\" />
     <Folder Include="Resources\Overlays\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Materials\Amber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Materials\Ancient_Gear.png" />
+    <Resource Include="Resources\Materials\Ancient_Screw.png" />
+    <Resource Include="Resources\Materials\Ancient_Spring.png" />
+    <Resource Include="Resources\Materials\BokoblinFang.png" />
+    <Resource Include="Resources\Materials\BokoblinGuts.png" />
+    <Resource Include="Resources\Materials\Bokoblin_Horn.png" />
+    <Resource Include="Resources\Materials\Fire_Keese_Wing.png" />
+    <Resource Include="Resources\Materials\Flint.png" />
+    <Resource Include="Resources\Materials\Ice_Keese_Wing.png" />
+    <Resource Include="Resources\Materials\Icy_Lizalfos_Tail.png" />
+    <Resource Include="Resources\Materials\Keese_Eyeball.png" />
+    <Resource Include="Resources\Materials\Keese_Wing.png" />
+    <Resource Include="Resources\Materials\Lizalfos-horn.png" />
+    <Resource Include="Resources\Materials\Lizalfos_Tail.png" />
+    <Resource Include="Resources\Materials\Lizalfos_Talon.png" />
+    <Resource Include="Resources\Materials\Lynel_Guts.png" />
+    <Resource Include="Resources\Materials\Lynel_Hoof.png" />
+    <Resource Include="Resources\Materials\Lynel_Horn.png" />
+    <Resource Include="Resources\Materials\Moblin_Fang.png" />
+    <Resource Include="Resources\Materials\Moblin_Guts.png" />
+    <Resource Include="Resources\Materials\Moblin_Horn.png" />
+    <Resource Include="Resources\Materials\Octorok_Eyeball.png" />
+    <Resource Include="Resources\Materials\Octorok_Tentacle.png" />
+    <Resource Include="Resources\Materials\Octo_Balloon.png" />
+    <Resource Include="Resources\Materials\Opal.png" />
+    <Resource Include="Resources\Materials\Red_Chuchu_Jelly.png" />
+    <Resource Include="Resources\Materials\Sapphire.png" />
+    <Resource Include="Resources\Materials\Yellow_Lizalfos_Tail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Details\LineSideL.png" />
+    <Resource Include="Resources\Details\LineSideR.png" />
+    <Resource Include="Resources\Details\PageIndecator.png" />
+    <Resource Include="Resources\Details\MaterialIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />

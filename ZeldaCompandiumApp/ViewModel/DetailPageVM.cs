@@ -22,10 +22,11 @@ namespace ZeldaCompandiumApp.ViewModel
         {
             CurrentMonster = new Monster();
 
-            CurrentMonster.Image = "https://botw-compendium.herokuapp.com/api/v2/entry/snow_octorok/image";
+            CurrentMonster.Image = "https://botw-compendium.herokuapp.com/api/v2/entry/guardian_skywatcher/image";
             CurrentMonster.Name = "002 Majoras Nightmare";
             CurrentMonster.Description = "These octopus-like monsters live in snowy fields and disguise themselves as grass. When someone wanders by, they spring into action and attack by spitting snowballs.";
             CurrentMonster.Common_locations = new string[]{ "Hyrule Field", "Deep Akkata","Salty Springs"};
+            CurrentMonster.Drops = new string[] { "Amber", "Ancient_Spring", "Flint" };
         }
 
     }

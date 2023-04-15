@@ -14,6 +14,7 @@
         <SolidColorBrush x:Key="SheikahBlue" Color="#40d4fc" />
         <FontFamily x:Key="RobotoMedium">/ZeldaCompandiumApp;components/Resources/Fonts/#Roboto Medium</FontFamily>
         <converter:StringArrayToStringConverter x:Key="ToString"/>
+        <converter:StringToImage x:Key="StringToImage"/>
     </Page.Resources>
 
     <Page.DataContext>
@@ -226,10 +227,15 @@
             </Image.Effect>
         </Image>
 
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
         <!--Description Text-->
         <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Description}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
                    FontSize="10" FontStyle="Italic"  
-                   Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" 
+                   Grid.Row="0"  
                    VerticalAlignment="Top" HorizontalAlignment="Center"
                   Background="Transparent" BorderThickness="0"
                   Width="210"
@@ -239,16 +245,40 @@
             </TextBox.Effect>
         </TextBox>
 
-        <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Common_locations, Converter={StaticResource ToString}}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
+        <!--Common location strings-->
+            <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Common_locations, Converter={StaticResource ToString}}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
                    FontSize="10" FontStyle="Italic"   
                   Background="Transparent" BorderThickness="0"
                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Grid.Row="1" 
                   Width="auto" Height="auto"
-                   Margin="30,126,0,0" Grid.Column="2" Grid.Row="1">
-            <TextBox.Effect>
-                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
-            </TextBox.Effect>
-        </TextBox>
+                   Margin="30,37,0,0" >
+                <TextBox.Effect>
+                    <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+                </TextBox.Effect>
+            </TextBox>
+            
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Height="50" Width="200" Margin="0, 35, 0, 0" VerticalAlignment="Top" >
+
+            <Image Source="{Binding CurrentMonster.Drops[0], Converter={StaticResource StringToImage}}"   
+                     HorizontalAlignment="Center" VerticalAlignment="Center" 
+                     Width="40" Height="40"
+                     Margin="0, 0, 0, 0">
+            </Image>
+
+            <Image Source="{Binding CurrentMonster.Drops[1], Converter={StaticResource StringToImage}}"   
+                     HorizontalAlignment="Center" VerticalAlignment="Center" 
+                     Width="40" Height="40"
+                     Margin="35, 0, 35, 0">
+            </Image>
+
+            <Image Source="{Binding CurrentMonster.Drops[2], Converter={StaticResource StringToImage}}"   
+                     HorizontalAlignment="Center" VerticalAlignment="Center" 
+                     Width="40" Height="40">
+            </Image>
+        </StackPanel>
 
 
     </Grid>

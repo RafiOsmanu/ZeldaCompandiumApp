@@ -8,16 +8,15 @@
         xmlns:vm="clr-namespace:ZeldaCompandiumApp.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" 
-        MaxWidth="800" MaxHeight="450" 
-        MinWidth="800" MinHeight="450">
+        MaxWidth="800" MaxHeight="450">
     
     <Window.DataContext>
-        <vm:DetailPageVM/>
+        <vm:OverViewPageVM/>
     </Window.DataContext>
 
-    <view:DetailPage x:Name="detailPage" Background="#333">
-        
-    </view:DetailPage>
+    <view:OverViewPage x:Name="overViewPage" Background="#333">
 
-   
+    </view:OverViewPage>
+
+
 </Window>
