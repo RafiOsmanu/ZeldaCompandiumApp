@@ -7,16 +7,46 @@
         xmlns:view="clr-namespace:ZeldaCompandiumApp.View"
         xmlns:vm="clr-namespace:ZeldaCompandiumApp.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" 
-        MaxWidth="800" MaxHeight="450">
-    
+        Title="MainWindow" Height="450" Width="800" >
+
     <Window.DataContext>
-        <vm:OverViewPageVM/>
+        <vm:MainViewModelVM/>
     </Window.DataContext>
 
-    <view:OverViewPage x:Name="overViewPage" Background="#333">
+    <Window.Resources>
+        <SolidColorBrush x:Key="SheikahBlue" Color="#40d4fc"/>
+    </Window.Resources>
 
-    </view:OverViewPage>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame NavigationUIVisibility="Hidden" Content="{Binding CurrentPage}" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+
+        <Button VerticalAlignment="Center" Width="84" Background="Transparent" BorderThickness="0"
+                Foreground="{StaticResource SheikahBlue}"
+                Margin="44, 92, 0, 0" Grid.Column="2" Grid.Row="2"
+                Command="{Binding SwitchPageCommand}"
+                Content="{Binding CommandText}">
+
+            <Button.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </Button.Effect>
+
+        </Button>
+       
+        
+                
+    </Grid>
 
 
 </Window>

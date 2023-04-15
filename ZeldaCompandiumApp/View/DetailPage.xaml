@@ -50,7 +50,7 @@
             <Image Source="{Binding CurrentMonster.Image, FallbackValue=C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Monsters\fire_keese.png}" 
                    Grid.Row="1" Grid.Column="1" Width="160" Height="160"  
                    VerticalAlignment="Center" HorizontalAlignment="Center" 
-                   Stretch="Fill"  />
+                   Stretch="UniformToFill"  />
         </Border>
         <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ImageFrame.png" Stretch="Fill"  Grid.Row="1" Grid.Column="1">
             <Image.Effect>
@@ -156,7 +156,7 @@
             </Image.Effect>
         </Image>
 
-        <TextBlock Text="{Binding CurrentMonster.Name}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="11" FontStyle="Italic"  
+        <TextBlock Text="{Binding CurrentMonster.NumbAndName}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="11" FontStyle="Italic"  
                    Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
                    VerticalAlignment="Center" HorizontalAlignment="Center" 
                    Margin="0, -80, 0, 0">
@@ -164,6 +164,8 @@
                 <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
             </TextBlock.Effect>
         </TextBlock>
+
+        
 
 
 
@@ -173,7 +175,7 @@
         <Rectangle Fill="{StaticResource SheikahBlue}" Width="78" Height="1" 
                    Grid.Column="2" Grid.Row="1" 
                    Margin="30, 4, 0, 0" 
-                   VerticalAlignment="Top" HorizontalAlignment="Left">
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill">
             <Rectangle.Effect>
                 <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
             </Rectangle.Effect>
@@ -184,7 +186,7 @@
         <Rectangle Fill="{StaticResource SheikahBlue}" Width="78" Height="1"  
                    Grid.Column="2" Grid.Row="1" 
                    Margin="146, 4, 0, 0" 
-                   VerticalAlignment="Top" >
+                   VerticalAlignment="Top" Stretch="Fill">
             <Rectangle.Effect>
                 <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
             </Rectangle.Effect>
@@ -246,7 +248,7 @@
         </TextBox>
 
         <!--Common location strings-->
-            <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Common_locations, Converter={StaticResource ToString}}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
+            <TextBox  TextWrapping="Wrap" Text="{Binding CurrentMonster.Common_locations, FallbackValue=None, Converter={StaticResource ToString}}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" 
                    FontSize="10" FontStyle="Italic"   
                   Background="Transparent" BorderThickness="0"
                   HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -279,6 +281,12 @@
                      Width="40" Height="40">
             </Image>
         </StackPanel>
+
+        <TextBlock Text="Hyrule Compandium" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="13" FontStyle="Italic" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-9, 15, 0, 0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
 
 
     </Grid>

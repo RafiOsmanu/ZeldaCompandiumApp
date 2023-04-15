@@ -24,9 +24,10 @@
       ],
       "description": "After Ganon was defeated by Link, the remaining Malice pulled itself together to form this bestial creature. Its appearance and fiendish magic eared it the name of Dark Beast. This form is considered to be Ganon's original, although in this state, his awareness has been consumed entirely by Malice, and all he knows is a desire to rampage and destroy.",
       "drops": [
-        " ",
-        "None",
-        " "
+        "Opal",
+       "Flint",
+        "Amber"
+
       ],
       "id": 164,
       "image": "https://botw-compendium.herokuapp.com/api/v2/entry/dark_beast_ganon/image",
@@ -57,9 +58,9 @@
       ],
       "description": "These spell-casting monsters can be found all over Hyrule. They use their blizzard rods to create freezing blasts of air or to summon frozen monsters and have been known to cause blizzards to severely decrease the temperature around them. The weather will normalize once the Blizzrobe is defeated.",
       "drops": [
-        " ",
-        "None",
-        " "
+        "Flint",
+        "Amber",
+        "Opal"
       ],
       "id": 101,
       "image": "https://botw-compendium.herokuapp.com/api/v2/entry/blizzrobe/image",
@@ -88,9 +89,9 @@
         "common_locations": null,
         "description": "The arbiter of worthiness for the hero who wishes to control a Divine Beast, following a revelation from the Goddess Hylia. As the last part of the final trial, the monk offers a challenge of ancient techniques.",
         "drops": [
-          " ",
-          "None",
-          " "
+          "Flint",
+          "Amber",
+          "Opal"
         ],
         "id": 137,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/monk_maz_koshia/image",
@@ -122,9 +123,9 @@
         ],
         "description": "These spell-casting monsters can be found all over Hyrule. They use their meteor rods to hurl fireballs or to summon flaming monsters and have been known to severely raise the temperature around them. The weather will normalize once the Wizzrobe is defeated.",
         "drops": [
-          " ",
-          "None",
-          " "
+          "Flint",
+          "Amber",
+          "Opal"
         ],
         "id": 100,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/meteo_wizzrobe/image",
@@ -139,7 +140,9 @@
         ],
         "description": "This low-level gel monster is engulfed in flames. Its strength varies depending on its size. It tends to explode if attacked from close range, so the use of spears, arrows, and other ranged weapons is advised.",
         "drops": [
-          "Red_Chuchu_Jelly"
+          "Red_Chuchu_Jelly",
+          "Amber",
+          "Flint"
         ],
         "id": 85,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/fire_chuchu/image",
@@ -188,9 +191,9 @@
         ],
         "description": "A spirit of lightning has taken the form of this giant dragon. Making its home in the Faron region, it's said to have served the Spring of Courage since ancient times. An old saying goes, \"The dragon ascends to the heavens as the sun begins to set,\" but nobody has seen this in the current age. The electricity that coats its body makes it dangerous to get near, but Farosh bears no ill will toward people.",
         "drops": [
-          " ",
-          "None",
-          " "
+          "Flint",
+          "Amber",
+          "Opal"
         ],
         "id": 155,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/farosh/image",
@@ -204,9 +207,9 @@
         ],
         "description": "This phantom of Ganon attacked the Divine Beast Vah Medoh and was responsible for the demise of the Champion Revali. It specializes in long-ranged wind attacks.",
         "drops": [
-          " ",
-          "None",
-          " "
+          "Flint",
+          "Amber",
+          "Opal"
         ],
         "id": 162,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/windblight_ganon/image",
@@ -239,7 +242,9 @@
         "description": "The unpredictable flight pattern of this noctoural bat-like species can make fighting them a nuisance, but they're weak enough to fell with a single strike. Sometimes they'll attack in packs, but even then, a pack can be sent packing with a single attack.",
         "drops": [
           "Keese_Wing",
-          "Keese_Eyeball"
+          "Keese_Eyeball",
+          "Flint"
+          
         ],
         "id": 88,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/keese/image",
@@ -248,11 +253,13 @@
       },
       {
         "category": "monsters",
-        "common_locations": null,
+        "common_locations": [ "Eldin Canyon" ],
         "description": "Guardians were originally designed by an ancient civilization to combat Ganon, but these smaller models were placed inside shrines as part of the trials found within. The multiple legs and beam functionality were scaled down but kept mostly intact.",
         "drops": [
           "Ancient_Screw",
-          "Ancient_Spring"
+          "Ancient_Spring",
+          "Amber"
+          
         ],
         "id": 130,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/guardian_scout_i/image",
@@ -268,7 +275,8 @@
         "description": "The intense frost that engulfs the bodies of these bat-like Keese makes them more dangerous than the standard type. They're capable of freezing anything they touch.",
         "drops": [
           "Ice_Keese_Wing",
-          "Keese_Eyeball"
+          "Keese_Eyeball",
+          "Opal"
         ],
         "id": 90,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/ice_keese/image",
@@ -284,7 +292,8 @@
         "description": "The remains of Moblins appear in the dark of the night. Even the toughest Moblins become fragile when they're little more than a pile of bones, so they'll crumble after just a few attacks. However, as long as a skull remains intact, they'll continue to pull themselves back together and go on fighting.",
         "drops": [
           "Moblin_Horn",
-          "Moblin_Fang"
+          "Moblin_Fang",
+          "Flint"
         ],
         "id": 111,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/stalmoblin/image",
@@ -332,9 +341,9 @@
         ],
         "description": "The source of the darkness that has appeared time and again throughout Hyrule's history. It's been called many names, from \"Great King of Evil\" to \"Calamity.\" Hibernating within a cocoon, it attempted to regenerate a physical form after Link awoke but was forced to confront him in an incomplete state.",
         "drops": [
-          " ",
-          "None",
-          " "
+          "Flint",
+          "Amber",
+          "Opal"
         ],
         "id": 163,
         "image": "https://botw-compendium.herokuapp.com/api/v2/entry/calamity_ganon/image",

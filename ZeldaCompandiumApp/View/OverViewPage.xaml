@@ -43,8 +43,20 @@
         <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\Glow1.png" Stretch="Uniform" VerticalAlignment="Top" Margin="0,-15,0,0" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
         <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ShekiahMapBorder.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
 
+        <Button VerticalAlignment="Center" Width="64" Height="16" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left"
+                Foreground="{StaticResource SheikahBlue}"
+                Margin="10, 34, 0, 0" Grid.Column="1" Grid.Row="3"
+                Command="{Binding SwitchJson}"
+                Content="{Binding CommandText}">
 
-        <ListBox ItemsSource="{Binding Monsters}"
+            <Button.Effect>
+                <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
+            </Button.Effect>
+
+        </Button>
+
+
+        <ListBox ItemsSource="{Binding Monsters}" SelectedItem="{Binding SelectedMonster}"
                  Margin="0, 25, 0, 0"
          Width="685" Height="280" BorderThickness="0"
          Grid.ColumnSpan="6" Grid.RowSpan="4" Background="Transparent"
@@ -81,6 +93,13 @@
                             </TextBlock.Effect>
                         </TextBlock>
 
+                        <TextBlock Text="{Binding Numb}" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="8" FontStyle="Italic" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"  Margin="4.5, -12, 0, 0">
+                            <TextBlock.Effect>
+                                <DropShadowEffect Color="Black" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
+                            </TextBlock.Effect>
+                            
+                        </TextBlock>
+
 
                     </Grid>
                 </DataTemplate>
@@ -100,7 +119,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\MaterialIcon.png" 
+            <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Details\MaterialIcon1.png" 
                    Width="20" Height="20" 
                    Grid.Row="1" Grid.Column="1" 
                    VerticalAlignment="Top" Margin="0, 18, 0, 0">
@@ -113,20 +132,12 @@
                    Width="7" Height="7" 
                    Grid.Row="1" Grid.Column="1" 
                    VerticalAlignment="Top" Margin="0, 12, 0, 0" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="5.511"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
                 <Image.Effect>
                     <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
                 </Image.Effect>
             </Image>
 
-            <TextBlock Text="Materials" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="10" FontStyle="Italic" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock Text="Monsters" Foreground="{StaticResource SheikahBlue}" FontFamily="{StaticResource RobotoMedium}" FontSize="10" FontStyle="Italic" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Top" HorizontalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
                 </TextBlock.Effect>
@@ -137,6 +148,9 @@
                     <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="8" ShadowDepth="0" Opacity="1"/>
                 </TextBlock.Effect>
             </TextBlock>
+
+            
+
 
         </Grid>
 

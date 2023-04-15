@@ -8,9 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/details/linesidel.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/details/linesider.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/details/pagination.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/details/vector.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/details/abutton.png")]
 
 

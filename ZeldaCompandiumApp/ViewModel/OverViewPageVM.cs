@@ -1,16 +1,35 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using ZeldaCompandiumApp.Model;
 using ZeldaCompandiumApp.Repository;
+using ZeldaCompandiumApp.View;
 
 namespace ZeldaCompandiumApp.ViewModel
 {
     internal class OverViewPageVM : ObservableObject
     {
+
+        public string CommandText
+        {
+            get
+            {
+                if (IsJsonLocal) //overView page -> go to details page
+                {
+                    return "TO SERVER";
+                }
+                else
+                {
+                    return "TO LOCAL";
+                }
+            }
+
+        }
 
         private List<Monster> _monsters;
 
@@ -22,31 +41,50 @@ namespace ZeldaCompandiumApp.ViewModel
             set => SetProperty(ref _monsters, value);
         }
 
-        private List<String> _monstersImage;
+        private Monster _selectedMonster;
 
-        public List<String> MonstersImage
-
+        public Monster SelectedMonster
         {
-            get => _monstersImage
+            get => _selectedMonster
 ;
-            set => SetProperty(ref _monstersImage, value);
+            set => SetProperty(ref _selectedMonster, value);
         }
 
-        private List<String> _monstersNames;
-        public List<String> MonstersNames
+        public RelayCommand SwitchJson { get; private set; }
 
+        private bool _isJsonLocal = true;
+        public bool IsJsonLocal
         {
-            get => _monstersNames
-;
-            set => SetProperty(ref _monstersNames, value);
+            get { return _isJsonLocal; }
+            set
+            {
+                _isJsonLocal = value;
+                OnPropertyChanged(nameof(IsJsonLocal));
+            }
         }
+
 
 
         public OverViewPageVM() 
         {
             Monsters = MonsterRepository.GetMonsters();
-            MonstersImage = MonsterRepository.GetMonsterImages();
-            MonstersNames = MonsterRepository.GetMonsterNames();
+            SwitchJson = new RelayCommand(() => SwitchJsonFile()); 
+        }
+
+        public void SwitchJsonFile()
+        {
+            IsJsonLocal = !IsJsonLocal;
+
+            if(IsJsonLocal) 
+            {
+                Monsters = MonsterRepository.GetMonsters();
+                OnPropertyChanged(nameof(CommandText));
+            }
+            else
+            {
+                Monsters = MonsterRepositoryServer.GetMonsters();
+                OnPropertyChanged(nameof(CommandText));
+            }
         }
 
     }

@@ -17,6 +17,10 @@ namespace ZeldaCompandiumApp.Converters
             string type = value as string;
             if (!string.IsNullOrEmpty(type))
             {
+                if(type == "None" ||  type == " ")
+                {
+                    return null;
+                }
                 string imageName = $"{type}.png";
                 string imagePath = $"pack://application:,,,/{Assembly.GetExecutingAssembly().GetName().Name};component/Resources/Materials/{imageName}";
 
