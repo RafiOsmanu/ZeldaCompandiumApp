@@ -86,7 +86,7 @@
     },
       {
         "category": "monsters",
-        "common_locations": null,
+        "common_locations": [ "Trial of the Sword Shrine" ],
         "description": "The arbiter of worthiness for the hero who wishes to control a Divine Beast, following a revelation from the Goddess Hylia. As the last part of the final trial, the monk offers a challenge of ancient techniques.",
         "drops": [
           "Flint",
