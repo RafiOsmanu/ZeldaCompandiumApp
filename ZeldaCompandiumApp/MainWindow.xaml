@@ -7,7 +7,8 @@
         xmlns:view="clr-namespace:ZeldaCompandiumApp.View"
         xmlns:vm="clr-namespace:ZeldaCompandiumApp.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
+        Title="MainWindow" Height="450" Width="800" 
+        MaxHeight="450" MaxWidth="800">
 
     <Window.DataContext>
         <vm:MainViewModelVM/>
