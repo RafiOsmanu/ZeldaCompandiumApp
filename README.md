@@ -1,4 +1,4 @@
-# <div align="center">Zelda Compandium</div>
+# <div align="center">Hyrule Compandium</div>
 
 * Zelda Breath Of The Wild Compandium User Interface
 * Api Reference: https://gadhagod.github.io/Hyrule-Compendium-API/#/
