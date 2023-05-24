@@ -36,12 +36,12 @@
         </Grid.ColumnDefinitions>
 
         <!--background & overlays-->
-        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Bg\BgPattern.png" Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
-        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ScanLines.png" Stretch="UniformToFill" Opacity="0.2" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="pack://application:,,,/Resources\Bg\BgPattern.png" Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="pack://application:,,,/Resources\Overlays\ScanLines.png" Stretch="UniformToFill" Opacity="0.2" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
 
-        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\Glow0.png" Stretch="Uniform" VerticalAlignment="Bottom" Margin="0,0,0,-30" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
-        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\Glow1.png" Stretch="Uniform" VerticalAlignment="Top" Margin="0,-15,0,0" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
-        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ShekiahMapBorder.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="pack://application:,,,/Resources\Overlays\Glow0.png" Stretch="Uniform" VerticalAlignment="Bottom" Margin="0,0,0,-30" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="pack://application:,,,/Resources\Overlays\Glow1.png" Stretch="Uniform" VerticalAlignment="Top" Margin="0,-15,0,0" Opacity="0.6" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+        <Image Source="pack://application:,,,/Resources\Overlays\ShekiahMapBorder.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
 
         <Button VerticalAlignment="Center" Width="64" Height="16" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left"
                 Foreground="{StaticResource SheikahBlue}"
@@ -81,7 +81,7 @@
                             <Image Source="{Binding Image, Converter={StaticResource UrlToImage}}" Stretch="Uniform" Height="70" Width="70" Grid.Row="0" />
                         </Border>
 
-                        <Image Source="C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Overlays\ImageFrame.png" Grid.Row="0" Height="74" Width="74">
+                        <Image Source="pack://application:,,,/Resources\Overlays\ImageFrame.png" Grid.Row="0" Height="74" Width="74">
                             <Image.Effect>
                                 <DropShadowEffect Color="{Binding Source={StaticResource SheikahBlue}, Path=Color}" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
                             </Image.Effect>

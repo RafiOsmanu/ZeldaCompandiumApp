@@ -151,10 +151,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Bg\" />
     <Folder Include="Resources\Fonts\" />
-    <Folder Include="Resources\Monsters\" />
-    <Folder Include="Resources\Overlays\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Materials\Amber.png" />
@@ -202,6 +199,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Details\AButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Overlays\Glow0.png" />
+    <Resource Include="Resources\Overlays\Glow1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Overlays\ImageFrame.png" />
+    <Resource Include="Resources\Overlays\ImageFrameCorers.png" />
+    <Resource Include="Resources\Overlays\ScanLines.png" />
+    <Resource Include="Resources\Overlays\ShekiahMapBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bg\BgPattern.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Monsters\fire_keese.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />
