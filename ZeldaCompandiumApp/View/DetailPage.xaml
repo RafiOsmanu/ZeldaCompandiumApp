@@ -47,7 +47,7 @@
             <Border.Effect>
                 <DropShadowEffect Color="AliceBlue" BlurRadius="5" ShadowDepth="0" Opacity="1"/>
             </Border.Effect>
-            <Image Source="{Binding CurrentMonster.Image, FallbackValue=C:\DAE\DAE_ToolDev_22-23\ZeldaCompandiumApp\ZeldaCompandiumApp\Resources\Monsters\fire_keese.png}" 
+            <Image Source="{Binding CurrentMonster.Image, FallbackValue=pack://application:,,,/Resources\Monsters\fire_keese.png}" 
                    Grid.Row="1" Grid.Column="1" Width="160" Height="160"  
                    VerticalAlignment="Center" HorizontalAlignment="Center" 
                    Stretch="UniformToFill"  />
